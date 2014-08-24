@@ -6,6 +6,18 @@ Uses descriptive activity names to name the activities in the data set
 Appropriately labels the data set with descriptive variable names. 
 Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 
+ Assumed that the files are available in the working directory as below
+    <working directory> 
+           |_ activity_labels.txt
+           |_ features.txt
+           |_ test
+                 |_ y_test.txt
+                 |_ X_test.txt
+                 |_ subject_test.txt
+           |_ train
+                 |_ y_train.txt
+                 |_ X_train.txt
+                 |_ subject_test.txt
 
 #Input data
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip

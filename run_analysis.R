@@ -13,8 +13,20 @@
 ##  each variable for each activity and each subject. 
 ##
 ## Check out the "readme.md" file on the input, output and processing logic for this script
-## Assumed that the files are available in the working directory.
-## 
+## Assumed that the files are available in the working directory as below
+##    <working directory> 
+##           |_ activity_labels.txt
+##           |_ features.txt
+##           |_ test
+##                 |_ y_test.txt
+##                 |_ X_test.txt
+##                 |_ subject_test.txt
+##           |_ train
+##                 |_ y_train.txt
+##                 |_ X_train.txt
+##                 |_ subject_test.txt
+##
+##
 # Read the input files
 activity_labels <- read.csv("activity_labels.txt",header=FALSE,sep=" ")
 features <- read.csv("features.txt",header=FALSE,sep=" ")
