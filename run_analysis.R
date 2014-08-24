@@ -72,7 +72,7 @@ dim(finaldf)
 ###############################################################################################
 # 3. Uses descriptive activity names to name the activities in the data set
 ###############################################################################################
-finaldf$ActivityDesc <- activity_labels$V2[match(finaldf$activityID,activity_labels$V1)]
+finaldf$activityDescription <- activity_labels$V2[match(finaldf$activityID,activity_labels$V1)]
 dim(finaldf)
 
 ###############################################################################################
@@ -89,9 +89,9 @@ names(finaldf) <- namelist
 ###############################################################################################
 install.packages("plyr")
 library(plyr)
-tidydata <- ddply(finaldf, .(activityID, ActivityDesc, subjectID), colwise(mean))
+tidydata <- ddply(finaldf, .(activityID, activityDescription, subjectID), colwise(mean))
 namelist <- names(tidydata)
 namelist[4:length(namelist)] <- paste("mean",namelist[4:length(namelist)],sep="_")
 names(tidydata) <- namelist
 
-write.table(tidydata,"tidydata.txt")
+write.table(tidydata,"tidydata.txt",row.names=FALSE)
